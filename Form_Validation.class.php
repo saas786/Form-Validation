@@ -23,7 +23,6 @@ class Form_Validation
 
     /**
      * @param array $var
-     * @return void
      */
     private function __construct(array $var)
     {
@@ -166,10 +165,10 @@ class Form_Validation
      * @param $key dizi içindeki key adı
      * @return bool
      */
-	private function valid_date($key)
-	{
-		return strtotime($this->var[$key]) == true;
-	}
+    public function valid_date($key)
+    {
+        return strtotime($this->var[$key]) == true;
+    }
 
     /**
      * Belirtilen kuralları kontrol eden fonksiyon.
