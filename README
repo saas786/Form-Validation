@@ -1,0 +1,17 @@
+Requirement:
+php >= 5.2 and filter_var library.
+
+Usage:
+
+<?php
+include 'Form_Validation.class.php';
+
+$validation = new Form_Validation($_POST)->rule('field','required|min_len:3|max_len:5');
+
+if ($validation->check()) {
+	echo 'valid';
+} else {
+	echo 'error';
+}
+
+?>
