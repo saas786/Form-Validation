@@ -14,7 +14,6 @@ class Form_Validation
      * @var array
      */
     private $var;
-    private static $instance;
 
     /**
      * Rolleri Barındırır.
