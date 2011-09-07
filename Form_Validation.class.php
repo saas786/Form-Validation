@@ -162,6 +162,16 @@ class Form_Validation
     }
 
     /**
+     * Girilen tarihin geçerliliğini kontrol eder.
+     * @param $key dizi içindeki key adı
+     * @return bool
+     */
+	private function valid_date($key)
+	{
+		return strtotime($this->var[$key]) == true;
+	}
+
+    /**
      * Belirtilen kuralları kontrol eden fonksiyon.
      * @throws Exception
      * @return bool
