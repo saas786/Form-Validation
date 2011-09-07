@@ -17,6 +17,8 @@ if ($validation->check()) {
 	echo 'error';
 }
 
+?>
+
 RULES:
 --------------------
 required: Value must be a non-empty value.
@@ -29,6 +31,4 @@ is_ip: Value must be an IP address
 is_url: Value must be a URL
 valid_date: Value must be a date
 
-
-?>
 
