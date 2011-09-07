@@ -25,7 +25,7 @@ class Form_Validation
      * @param array $var
      * @return void
      */
-    private function __constrcut(array $var)
+    private function __construct(array $var)
     {
         $this->var = $var;
     }
