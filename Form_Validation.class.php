@@ -14,6 +14,7 @@ class Form_Validation
      * @var array
      */
     private $var;
+    private static $instance;
 
     /**
      * Rolleri Barındırır.
@@ -25,9 +26,19 @@ class Form_Validation
      * @param array $var
      * @return void
      */
-    public function __constrcut(array $var)
+    private function __constrcut(array $var)
     {
         $this->var = $var;
+    }
+
+    /**
+     * @static
+     * @param array $var
+     * @return Form_Validation
+     */
+    public static function factory(array $var)
+    {	
+        return new Form_Validation($var);
     }
 
     /**
@@ -197,3 +208,6 @@ class Form_Validation
         }
     }
 }
+
+
+
