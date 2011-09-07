@@ -189,6 +189,7 @@ class Form_Validation
                         }
 
                         $is_valid = $this->$rule($key);
+
                     } else {
                         $rule = explode(':', $rule);
 
@@ -202,6 +203,7 @@ class Form_Validation
             }
 
             return $is_valid;
+
         } Catch (Exception $e) {
             echo '<pre>'.var_export($e,true).'</pre>';
         }
