@@ -6,7 +6,10 @@ Usage:
 <?php
 include 'Form_Validation.class.php';
 
-$validation = new Form_Validation($_POST)->rule('field','required|min_len:3|max_len:5');
+$validation = Form_Validation::factory($_POST);
+  			->rule('field','required|min_len:3|max_len:5')
+			->rule('field2','required')
+			->rule('field3','valid_email');
 
 if ($validation->check()) {
 	echo 'valid';
@@ -15,3 +18,8 @@ if ($validation->check()) {
 }
 
 ?>
+
+Rules:
+required: 
+valid_email:
+
