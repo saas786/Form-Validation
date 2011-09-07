@@ -19,7 +19,3 @@ if ($validation->check()) {
 
 ?>
 
-Rules:
-required: 
-valid_email:
-
