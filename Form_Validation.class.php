@@ -171,6 +171,30 @@ class Form_Validation
     }
 
     /**
+     * Girilen telefon numarasının doğruluğunu kontrol eder.
+     * @param $key
+     * @return bool
+     */
+    private function phone($key)
+    {
+        $len = array(10,11,13,14);
+
+        $num = preg_replace('#\d+#','',$this->var[$key]);
+
+        return in_array(strlen($num), $len);
+    }
+
+    /**
+     * FILES dizinin boş olup olmadığını kontrol eder.
+     * @param $key
+     * @return bool
+     */
+    public function not_empty_file($key)
+    {
+        return empty($_FILES[$key]['name']) !== true;
+    }
+
+    /**
      * Belirtilen kuralları kontrol eden fonksiyon.
      * @throws Exception
      * @return bool

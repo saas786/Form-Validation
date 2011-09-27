@@ -6,7 +6,7 @@ Usage:
 <?php
 include 'Form_Validation.class.php';
 
-$validation = Form_Validation::factory($_POST);
+$validation = Form_Validation::factory($_POST)
   			->rule('field','required|min_len:3|max_len:5')
 			->rule('field2','required')
 			->rule('field3','valid_email');
@@ -29,6 +29,8 @@ is_int: Only numeric characters allowed
 is_string: Only string
 is_ip: Value must be an IP address
 is_url: Value must be a URL
-valid_date: Value must be a date
+valid_date: Value must be  date
+phone: valid phone number
+not_empty_file: not empty files ( $_FILES['blabla']['name] )
 
 
